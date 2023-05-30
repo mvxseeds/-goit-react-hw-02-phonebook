@@ -1,7 +1,7 @@
 import { Formik } from "formik";
 import { FormPanel, Label, Input, Submit, AddIcon } from "./ContactForm.styled";
 
-const ContactForm = ({addContact}) => {
+const ContactForm = ({onAddContact}) => {
   const initialValues = {
     contacts: [],
     name: "",
@@ -9,7 +9,7 @@ const ContactForm = ({addContact}) => {
   };
 
   const handleSubmit = (values, actions) => {
-    addContact(values);
+    onAddContact(values);
     actions.resetForm();
   };
 
